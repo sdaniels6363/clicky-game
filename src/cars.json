@@ -1,0 +1,51 @@
+[
+    {
+        "id":1,
+        "alt": "citroen-1",
+        "src": "./img/citroen-1.jpg"
+    },{
+        "id":2,
+        "alt": "citroen-2",
+        "src": "./img/citroen-2.jpg"
+    },{
+        "id":3,
+        "alt": "citroen-3",
+        "src": "./img/citroen-3.jpg"
+    },{
+        "id":4,
+        "alt": "ford-1",
+        "src": "./img/ford-1.jpg"
+    },{
+        "id":5,
+        "alt": "ford-2",
+        "src": "./img/ford-2.jpg"
+    },{
+        "id":6,
+        "alt": "ford-3",
+        "src": "./img/ford-3.jpg"
+    },{
+        "id":7,
+        "alt": "hyundai-1",
+        "src": "./img/hyundai-1.jpg"
+    },{
+        "id":8,
+        "alt": "subaru-1",
+        "src": "./img/subaru-1.jpg"
+    },{
+        "id":9,
+        "alt": "vw-1",
+        "src": "./img/vw-1.jpg"
+    },{
+        "id":10,
+        "alt": "vw-2",
+        "src": "./img/vw-2.jpg"
+    },{
+        "id":11,
+        "alt": "yaris-1",
+        "src": "./img/yaris-1.jpg"
+    },{
+        "id":12,
+        "alt": "yaris-2",
+        "src": "./img/yaris-2.jpg"
+    }
+]
