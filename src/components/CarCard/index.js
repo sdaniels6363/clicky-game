@@ -17,7 +17,7 @@ class CarCard extends Component {
                     <a href="#" onClick={this.toggleClicked}>
                         <img 
                             alt={this.props.alt}
-                            src={this.props.img}
+                            src={this.props.src}
                         />
                     </a>
                 </div>
