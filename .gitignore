@@ -62,3 +62,4 @@ typings/
 
 # additional ignored files
 package-lock.json
+scrap.js
