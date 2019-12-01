@@ -11,22 +11,20 @@ class App extends Component {
   };
 
   toggleClicked = id => {
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
+    const cars = this.state.cars.filter(car => car.id !== id);
+    this.setState({ cars });
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <Wrapper>
         <Title>Rally Car Memory Game</Title>
-        {this.state.cars.map(cars => (
+        {this.state.cars.map(car => (
           <CarCard
-            id={cars.id}
-            key={cars.id}
-            alt={cars.alt}
-            src={cars.src}
+            id={car.id}
+            key={car.id}
+            alt={car.alt}
+            src={car.src}
           />
         ))};
       </Wrapper>
