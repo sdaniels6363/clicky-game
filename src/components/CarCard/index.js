@@ -4,12 +4,12 @@ import "./style.css"
 function CarCard(props) {
     return (
         <div className="img-container">
-            <a href="#" onClick={props.toggle} data-clicked={props.clicked}>
+            <button onClick={props.toggle} data-clicked={props.clicked}>
                 <img
                     alt={props.alt}
                     src={props.src}
                 />
-            </a>
+            </button>
         </div>
     )
 }
