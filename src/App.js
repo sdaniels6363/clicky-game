@@ -5,6 +5,7 @@ import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import cars from "./cars.json";
 import Scoreboard from "./components/Scoreboard";
+import PlayerMessage from "./components/PlayerMessage"
 
 // functions
 
@@ -23,20 +24,30 @@ function fourPerRow(array, start, end) {
   return newRow;
 }
 
+function randomize(arr) {
+  randomizeCars(arr);
+  let row1 = fourPerRow(arr, 0, 3);
+  let row2 = fourPerRow(arr, 4, 7);
+  let row3 = fourPerRow(arr, 8, 11);
+  return [row1, row2, row3]
+}
 
-// randomize the order of the cars to render.
-randomizeCars(cars)
-const row1 = fourPerRow(cars, 0, 3);
-const row2 = fourPerRow(cars, 4, 7);
-const row3 = fourPerRow(cars, 8, 11);
+const test = randomize(cars)
+const [row1, row2, row3] = test
+
+
 
 
 class App extends Component {
   state = {
-    cars,
     highscore: 0,
-    score: 0
+    score: 0,
+    message: ""
   };
+
+  componentDidMount() {
+    // randomize the order of the cars to render.
+  }
 
   toggleClicked = (event) => {
     event.preventDefault()
@@ -44,33 +55,44 @@ class App extends Component {
     // get the clicked car name
     let clickedCar = event.target.alt;
 
-    // filter the cars array for that car
-    this.state.cars.filter(car => {
-      if (clickedCar === car.alt && car.clicked === false) {
+    // find car out of cars array, filter returns array, so have to retrieve index 0
+    let filtered = cars.filter(car => car.alt === clickedCar)[0]
 
-        car.clicked = true
-        let newScore = this.state.score + 1
-        this.setState({ score: newScore })
+    // get index of that car
+    let carIdx = cars.indexOf(filtered)
+    if (filtered.clicked === false) {
 
-      } else if (clickedCar === car.alt && car.clicked === true) {
-
-        let currScore = this.state.score
-        let currHigh = this.state.highscore
-
-        if (currScore >= currHigh) {
-          // update high score
-          this.setState({ highscore: currScore })
-          // reset score to 0
-          this.setState({ score: 0 })
-        } else {
-          // reset score to 0
-          this.setState({ score: 0 })
-        }
-
+      cars[carIdx].clicked = true;
+      let newScore = this.state.score + 1
+      this.setState({ score: newScore })
+      if (newScore === 12) {
+        this.setState({ message: "You Win!" })
+        this.setState({ highscore: newScore })
       } else {
-        // pass silently
+        this.setState({ message: "You guessed correctly." })
       }
-    })
+
+    } else if (filtered.clicked === true) {
+
+      // if user selects a car they've already chosen, reset all cars to false and start over
+      cars.map(car => car.clicked = false)
+
+      let currScore = this.state.score
+      let currHigh = this.state.highscore
+
+      if (currScore >= currHigh) {
+        // update high score
+        this.setState({ highscore: currScore })
+        // reset score to 0
+        this.setState({ score: 0 })
+      } else {
+        // reset score to 0
+        this.setState({ score: 0 })
+      }
+      this.setState({ message: "Incorrect guess, you lose." })
+    } else {
+      // pass silently
+    }
   }
 
   render() {
@@ -101,7 +123,7 @@ class App extends Component {
                     alt={car.alt}
                     src={car.src}
                     clicked={car.clicked}
-                    onClick={this.toggleClicked}
+                    toggle={this.toggleClicked}
                   />
                 ))}
 
@@ -114,7 +136,7 @@ class App extends Component {
                     alt={car.alt}
                     src={car.src}
                     clicked={car.clicked}
-                    onClick={this.toggleClicked}
+                    toggle={this.toggleClicked}
                   />
                 ))}
 
@@ -123,6 +145,7 @@ class App extends Component {
             </div>
           </div>
         </div>
+        <PlayerMessage message={this.state.message} />
       </Wrapper>
     );
   }
