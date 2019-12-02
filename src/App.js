@@ -108,7 +108,7 @@ class App extends Component {
                     id={car.id}
                     key={car.id}
                     alt={car.alt}
-                    src={car.src}
+                    src={require("."+car.src)}
                     clicked={car.clicked}
                     toggle={this.toggleClicked}
                   />
@@ -120,7 +120,7 @@ class App extends Component {
                     id={car.id}
                     key={car.id}
                     alt={car.alt}
-                    src={car.src}
+                    src={require("."+car.src)}
                     clicked={car.clicked}
                     toggle={this.toggleClicked}
                   />
@@ -133,7 +133,7 @@ class App extends Component {
                     id={car.id}
                     key={car.id}
                     alt={car.alt}
-                    src={car.src}
+                    src={require("."+car.src)}
                     clicked={car.clicked}
                     toggle={this.toggleClicked}
                   />
