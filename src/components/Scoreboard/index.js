@@ -4,8 +4,7 @@ import "./style.css";
 function Scoreboard(props) {
     return (
         <div className="scoreboard">
-            <h3 className="score">Current Score: {props.score}</h3>
-            <h3 className="score">High Score: {props.highscore}</h3>
+            <h3 className="score"><span className="textAlignLeft">Current Score: {props.score}</span><span className="textAlignRight">High Score: {props.highscore}</span></h3>
         </div>
     );
 }
