@@ -2,62 +2,62 @@
     {
         "id":1,
         "alt": "citroen-1",
-        "src": "/citroen1.jpg",
+        "src": "./citroen1.jpg",
         "clicked": false
     },{
         "id":2,
         "alt": "citroen-2",
-        "src": "/citroen2.jpg",
+        "src": "./citroen2.jpg",
         "clicked": false
     },{
         "id":3,
         "alt": "citroen-3",
-        "src": "/citroen3.jpg",
+        "src": "./citroen3.jpg",
         "clicked": false
     },{
         "id":4,
         "alt": "ford-1",
-        "src": "/ford1.jpg",
+        "src": "./ford1.jpg",
         "clicked": false
     },{
         "id":5,
         "alt": "ford-2",
-        "src": "/ford2.jpg",
+        "src": "./ford2.jpg",
         "clicked": false
     },{
         "id":6,
         "alt": "ford-3",
-        "src": "/ford3.jpg",
+        "src": "./ford3.jpg",
         "clicked": false
     },{
         "id":7,
         "alt": "hyundai-1",
-        "src": "/hyundai1.jpg",
+        "src": "./hyundai1.jpg",
         "clicked": false
     },{
         "id":8,
         "alt": "subaru-1",
-        "src": "/subaru1.jpg",
+        "src": "./subaru1.jpg",
         "clicked": false
     },{
         "id":9,
         "alt": "vw-1",
-        "src": "/vw1.jpg",
+        "src": "./vw1.jpg",
         "clicked": false
     },{
         "id":10,
         "alt": "vw-2",
-        "src": "/vw2.jpg",
+        "src": "./vw2.jpg",
         "clicked": false
     },{
         "id":11,
         "alt": "yaris-1",
-        "src": "/yaris1.jpg",
+        "src": "./yaris1.jpg",
         "clicked": false
     },{
         "id":12,
         "alt": "yaris-2",
-        "src": "/yaris2.jpg",
+        "src": "./yaris2.jpg",
         "clicked": false
     }
 ]

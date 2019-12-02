@@ -63,3 +63,5 @@ typings/
 # additional ignored files
 package-lock.json
 scrap.js
+build/
+src/.DS_Store
