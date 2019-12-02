@@ -6,7 +6,6 @@ import Title from "./components/Title";
 import cars from "./cars.json";
 import Scoreboard from "./components/Scoreboard";
 import PlayerMessage from "./components/PlayerMessage"
-
 // functions
 
 function randomizeCars(array) {
@@ -108,7 +107,7 @@ class App extends Component {
                     id={car.id}
                     key={car.id}
                     alt={car.alt}
-                    src={require("."+car.src)}
+                    src={car.src}
                     clicked={car.clicked}
                     toggle={this.toggleClicked}
                   />
@@ -120,7 +119,7 @@ class App extends Component {
                     id={car.id}
                     key={car.id}
                     alt={car.alt}
-                    src={require("."+car.src)}
+                    src={car.src}
                     clicked={car.clicked}
                     toggle={this.toggleClicked}
                   />
@@ -133,7 +132,7 @@ class App extends Component {
                     id={car.id}
                     key={car.id}
                     alt={car.alt}
-                    src={require("."+car.src)}
+                    src={car.src}
                     clicked={car.clicked}
                     toggle={this.toggleClicked}
                   />
