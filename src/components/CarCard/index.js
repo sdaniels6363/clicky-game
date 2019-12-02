@@ -1,28 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css"
 
-class CarCard extends Component {
-    state = {
-        clicked: false
-    }
-
-    toggleClicked = () => {
-        this.setState({ clicked: true }, (this.state.clicked) ? alert("already clicked") : alert("good choice"))
-    }
-
-    render() {
-        return (
-            <div className="card">
-                <div className="img-container">
-                    <a href="#" onClick={this.toggleClicked}>
-                        <img 
-                            alt={this.props.alt}
-                            src={this.props.src}
-                        />
-                    </a>
-                </div>
-            </div>
-        );
-    }
+function CarCard(props) {
+    return (
+        <div className="img-container">
+            <a href="#" onClick={props.toggle} data-clicked={props.clicked}>
+                <img
+                    alt={props.alt}
+                    src={props.src}
+                />
+            </a>
+        </div>
+    )
 }
+
 export default CarCard;
