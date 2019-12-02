@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a82b8a79c09a1bc605137f9e4ea6820b",
+    "revision": "f0b5cd6509efa73574dcdbbedc024ce4",
     "url": "/clicky-game/index.html"
   },
   {
-    "revision": "cb72b9f7b853baf956fb",
+    "revision": "5f7957749580067db27e",
     "url": "/clicky-game/static/css/main.050a379f.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/clicky-game/static/js/2.b979d32c.chunk.js"
   },
   {
-    "revision": "cb72b9f7b853baf956fb",
-    "url": "/clicky-game/static/js/main.34effef0.chunk.js"
+    "revision": "5f7957749580067db27e",
+    "url": "/clicky-game/static/js/main.0d40e83b.chunk.js"
   },
   {
     "revision": "ac1e54977f7772275215",
