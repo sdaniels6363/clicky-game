@@ -31,7 +31,7 @@ class App extends Component {
     row1: fourPerRow(cars, 0, 3), 
     row2: fourPerRow(cars, 4, 7),
     row3: fourPerRow(cars, 8, 11),
-    message: ""
+    message: "The purpose of this game is to select each of the 12 cars on screen and never click on an individual car more than once."
   };
 
   componentDidMount() {
