@@ -21,3 +21,9 @@ img {
     padding:0px;
     margin: 5px;
 }
+
+@media screen and (max-width: 540px) {
+    .img-container{
+        margin-left: 75px;
+    }
+}
